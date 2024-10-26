@@ -234,6 +234,8 @@
  .marquee {
     position: relative;
     overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+
  }
  
  .marquee .marquee-scroll {
