@@ -235,6 +235,17 @@
                                 <div class="col-row col-row-title-1">
                                     <h2>Where Design Meets Delight</h2>
                                 </div>
+                                <section>
+
+                                    <div class="toggle-container" style="float: right; padding-right: 10%;">
+                                        <label class="switch">
+                                            <input type="checkbox" onclick="toggleText()">
+                                            <span class="slider"></span>
+                                        </label>
+                
+                                        <p style="padding-left: 1vh; font-style: italic; color: #500e91;">*no bluff</p>
+                                    </div>
+                                </section>
                                 <div class="col-row col-row-title-2">
 
                                     <div class="star" data-scroll data-scroll-direction="horizontal"
@@ -261,17 +272,10 @@
                                         experiences that sing. Join me as I release the power of creativity, one design
                                         at a time.
                                     </p>
+                                    
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="toggle-container" style="float: right;">
-                        <label class="switch">
-                            <input type="checkbox" onclick="toggleText()">
-                            <span class="slider"></span>
-                        </label>
-                        
-                        <p style="padding-left: 1vh; font-style: italic;">*no 💩</p>
                     </div>
                 </div>
             </section>
@@ -354,74 +358,73 @@
         }
     </script>
     <style>
-.toggle-container {
-    display: flex;
-    align-items: center;
-    margin-top: 2vh;
-}
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            margin-top: 2vh;
+        }
 
-.toggle-label {
-    margin-left: 2vh;
-    font-weight: bold;
-}
+        .toggle-label {
+            margin-left: 2vh;
+            font-weight: bold;
+        }
 
-.switch {
-    --secondary-container: #dd81ff;
-    --primary: #2a064f;
-    font-size: 3vh;
-    position: relative;
-    display: inline-block;
-    width: 5vh;
-    height: 2.5vh;
-}
+        .switch {
+            --secondary-container: #dd81ff;
+            --primary: #2a064f;
+            font-size: 3vh;
+            position: relative;
+            display: inline-block;
+            width: 3.5vh;
+            height: 2vh;
+        }
 
-.switch input {
-    display: none;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
+        .switch input {
+            display: none;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #410b77;
-    transition: .2s;
-    border-radius: 30px;
-}
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #410b77;
+            transition: .2s;
+            border-radius: 30px;
+        }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 2vh;
-    width: 2vh;
-    border-radius: 20px;
-    left: 0.2vh;
-    bottom: 0.2vh;
-    background-color: #2a064f;
-    transition: .4s;
-}
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 1.5vh;
+            width: 1.5vh;
+            border-radius: 20px;
+            left: 0.2vh;
+            bottom: 0.2vh;
+            background-color: #2a064f;
+            transition: .4s;
+        }
 
-input:checked + .slider::before {
-    background-color: var(--primary);
-}
+        input:checked+.slider::before {
+            background-color: var(--primary);
+        }
 
-input:checked + .slider {
-    background-color: var(--secondary-container);
-}
+        input:checked+.slider {
+            background-color: var(--secondary-container);
+        }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px var(--secondary-container);
-}
+        input:focus+.slider {
+            box-shadow: 0 0 1px var(--secondary-container);
+        }
 
-input:checked + .slider:before {
-    transform: translateX(2.5vh);
-}
-
+        input:checked+.slider:before {
+            transform: translateX(1.5vh);
+        }
     </style>
 </body>
 
