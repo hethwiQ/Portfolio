@@ -264,15 +264,7 @@
                                     </h2>
                                 </div>
                                 <div class="col-row col-row-text">
-                                    <p class="big" id="toggle-text">I use code like a paintbrush and pixels as a
-                                        canvas to create worlds that can be felt as well as
-                                        seen. I'm a web, UI/UX, and graphic design lover, a
-                                        devops engineer and tester that is constantly
-                                        learning and growing in this ever-changing field.
-                                        My journey is new, yet my passion burns bright,
-                                        fuelled by an insatiable desire to create
-                                        experiences that sing. Join me as I release the power of creativity, one design
-                                        at a time. 
+                                    <p class="big" id="toggle-text">I use code like a paintbrush and pixels as my canvas—crafting designs that are not only seen but truly felt. I’m a passionate web, UI/UX, and graphic design enthusiast with growing skills in DevOps and testing, constantly evolving in this dynamic field. Though my journey is just beginning, my creativity runs deep, driven by a relentless desire to build meaningful, immersive experiences. With every project, I blend logic with artistry—designing not just interfaces, but stories users can interact with. Join me as I turn ideas into impact, one design at a time. 
                                     </p>
                                 </div>
 
@@ -357,13 +349,15 @@
     <script>
         function toggleText() {
             const paragraph = document.getElementById("toggle-text");
-            paragraph.innerText =
-                paragraph.innerText ===
-                    "I use code like a paintbrush and pixels as a canvas to create worlds that can be felt as well as seen. I'm a web, UI/UX, and graphic design lover, a devops engineer and tester that is constantly learning and growing in this ever-changing field. My journey is new, yet my passion burns bright, fuelled by an insatiable desire to create experiences that sing. Join me as I release the power of creativity, one design at a time."
-                    ? "UI/UX & graphic designer with DevOps and software engineering skills. Self-taught, adaptable, and continuously improving to meet industry needs."
-                    : "I use code like a paintbrush and pixels as a canvas to create worlds that can be felt as well as seen. I'm a web, UI/UX, and graphic design lover, a devops engineer and tester that is constantly learning and growing in this ever-changing field. My journey is new, yet my passion burns bright, fuelled by an insatiable desire to create experiences that sing. Join me as I release the power of creativity, one design at a time.";
+    
+            const fullVersion = "I use code like a paintbrush and pixels as my canvas—crafting designs that are not only seen but truly felt. I’m a passionate web, UI/UX, and graphic design enthusiast with growing skills in DevOps and testing, constantly evolving in this dynamic field. Though my journey is just beginning, my creativity runs deep, driven by a relentless desire to build meaningful, immersive experiences. With every project, I blend logic with artistry—designing not just interfaces, but stories users can interact with. Join me as I turn ideas into impact, one design at a time.";
+    
+            const noBluffVersion = "UI/UX & graphic designer with DevOps and software engineering skills. Self-taught, adaptable, and continuously improving to meet industry needs.";
+    
+            paragraph.innerText = paragraph.innerText === fullVersion ? noBluffVersion : fullVersion;
         }
     </script>
+    
     <style>
         .toggle-container {
             display: flex;
