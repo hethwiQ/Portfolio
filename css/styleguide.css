@@ -28,6 +28,7 @@
  
  :root {
  
+    --color-dark-rgb: 26, 19, 13;
     --color-dark: rgba(var(--color-dark-rgb), 1);
  
     --color-light-rgb: 255, 190, 131;
