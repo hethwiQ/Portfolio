@@ -1,3 +1,19 @@
+.cont {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+
+    .ico {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 2em;
+      height: 2em;
+    }
+
+
 .loading-container {
     position: fixed;
     top: 0;

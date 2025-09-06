@@ -8,7 +8,8 @@
     <meta name="description" content="Hethwik Reddy - portfolio website" />
     <meta property="og:title" content="Hethwik Reddy - Portfolio" />
     <meta property="og:description" content="Hethwik Reddy's portfolio website" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/hethwiQ/siteassets/main/images/sitepreview.webp" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/hethwiQ/siteassets/main/images/sitepreview.webp" />
     <meta property="og:site_name" content="Portfolio - Hethwik Reddy K" />
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="website" />
@@ -55,6 +56,7 @@
                 <div class="styling-element right-top"></div>
                 <div class="styling-element left-bottom"></div>
                 <div class="styling-element right-bottom"></div>
+
             </div>
             <h5 class="cursor-text">Click anywhere to enter</h5>
         </div>
@@ -124,12 +126,13 @@
                 </div>
             </div>
         </header>
-        
+
         </div>
         <div class="main-wrap" id="main-wrap" data-scroll-container>
             <section class="section default-header full-height section-parallax-header" data-theme-section="dark"
                 data-bg-section="dark" data-scroll-section>
                 <div class="overlay header-visuals">
+
                     <div class="header-visuals-inner overlay">
                         <figure class="overlay image-overlay overlay">
                             <picture class="overlay">
@@ -164,6 +167,7 @@
                                 data-scroll data-scroll-speed="-0.5" data-scroll-position="top"
                                 data-scroll-target="#main" />
                         </div>
+                        
                         <div class="overlay-fade"></div>
                     </div>
                 </div>
@@ -172,7 +176,7 @@
                 </div>
                 <div class="container wide">
                     <div class="row">
-                        
+
                         <div class="col">
                             <div class="col-row col-row-first">
                                 <div class="marquee-group">
@@ -258,7 +262,7 @@
                                             <input type="checkbox" onclick="toggleText()">
                                             <span class="slider"></span>
                                         </label>
-                
+
                                         <p style="padding-left: 1vh; font-style: italic; color: #500e91;">*no bluff</p>
                                     </div>
                                 </section>
@@ -278,7 +282,14 @@
                                     </h2>
                                 </div>
                                 <div class="col-row col-row-text">
-                                    <p class="big" id="toggle-text">I use code like a paintbrush and pixels as my canvas—crafting designs that are not only seen but truly felt. I’m a passionate web, UI/UX, and graphic design enthusiast with growing skills in DevOps and testing, constantly evolving in this dynamic field. Though my journey is just beginning, my creativity runs deep, driven by a relentless desire to build meaningful, immersive experiences. With every project, I blend logic with artistry—designing not just interfaces, but stories users can interact with. Join me as I turn ideas into impact, one design at a time. 
+                                    <p class="big" id="toggle-text">I use code like a paintbrush and pixels as my
+                                        canvas—crafting designs that are not only seen but truly felt. I’m a passionate
+                                        web, UI/UX, and graphic design enthusiast with growing skills in DevOps and
+                                        testing, constantly evolving in this dynamic field. Though my journey is just
+                                        beginning, my creativity runs deep, driven by a relentless desire to build
+                                        meaningful, immersive experiences. With every project, I blend logic with
+                                        artistry—designing not just interfaces, but stories users can interact with.
+                                        Join me as I turn ideas into impact, one design at a time.
                                     </p>
                                 </div>
 
@@ -286,9 +297,9 @@
                         </div>
                     </div>
                 </div>
-                
+
             </section>
-            
+
 
             <section class="section section-parallax-next" data-scroll-section>
                 <div class="playpauze video-overlay">
@@ -338,10 +349,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
             </section>
-            
-            
+
+
             <footer class="section footer" data-theme-section="light" data-bg-section="light" data-scroll-section>
                 <div class="container full">
                     <div class="row bottom-bar">
@@ -363,15 +374,15 @@
     <script>
         function toggleText() {
             const paragraph = document.getElementById("toggle-text");
-    
+
             const fullVersion = "I use code like a paintbrush and pixels as my canvas—crafting designs that are not only seen but truly felt. I’m a passionate web, UI/UX, and graphic design enthusiast with growing skills in DevOps and testing, constantly evolving in this dynamic field. Though my journey is just beginning, my creativity runs deep, driven by a relentless desire to build meaningful, immersive experiences. With every project, I blend logic with artistry—designing not just interfaces, but stories users can interact with. Join me as I turn ideas into impact, one design at a time.";
-    
+
             const noBluffVersion = "UI/UX & graphic designer with DevOps and software engineering skills. Self-taught, adaptable, and continuously improving to meet industry needs.";
-    
+
             paragraph.innerText = paragraph.innerText === fullVersion ? noBluffVersion : fullVersion;
         }
     </script>
-    
+
     <style>
         .toggle-container {
             display: flex;
