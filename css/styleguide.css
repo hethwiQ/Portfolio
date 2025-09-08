@@ -31,7 +31,7 @@
     --color-dark-rgb: 15, 23, 25; 
     --color-dark: rgba(var(--color-dark-rgb), 1);
  
-    --color-light-rgb: 241, 255, 153;
+    --color-light-rgb: 252, 228, 221;
     --color-light: rgba(var(--color-light-rgb), 1);
  
     --color-white-rgb: 255, 255, 255;

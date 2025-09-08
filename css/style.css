@@ -335,7 +335,7 @@
  }
  
  .section-home-header .row .col-row.col-row-third .star svg path {
-    fill: var(--color-light);
+    fill: #ffd700;
  }
  
  .section-home-header .row .col-row.col-row-third .globe {
@@ -656,7 +656,7 @@
  }
  
  .section-parallax-intro .row .star svg path {
-    fill: var(--color-light);
+    fill: #ffd700;
  }
  
  .section-parallax-intro .row .globe {
