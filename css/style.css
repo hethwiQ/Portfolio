@@ -335,8 +335,9 @@
  }
  
  .section-home-header .row .col-row.col-row-third .star svg path {
-    fill: var(--color-light);
+    fill: var(--color-high);
  }
+ 
  
  .section-home-header .row .col-row.col-row-third .globe {
     width: calc(var(--title-size) * 0.9);
@@ -454,6 +455,9 @@
     width: 40%;
  }
  
+ .star svg {
+   fill: var(--color-high);
+ }
  @media screen and (max-width: 720px) {
  
     .section-parallax-header .row .col {
@@ -656,7 +660,7 @@
  }
  
  .section-parallax-intro .row .star svg path {
-    fill: var(--color-light);
+    fill: var(--color-high);
  }
  
  .section-parallax-intro .row .globe {
@@ -839,3 +843,4 @@
     }
  
  }
+ 
