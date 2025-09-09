@@ -185,8 +185,20 @@
                         <div class="col col-right">
                             <div class="col-row">
                                 <div class="col-row col-row-title-1">
-                                    <h2>Where Design Meets Delight</h2>
+                                    <h2>Storytelling Through Thoughtful Design</h2>
                                 </div>
+                                <section>
+                                
+                                
+                                    <div class="toggle-container" style="float: right;">
+                                        <label class="switch" style="opacity: 1;">
+                                            <input type="checkbox" onclick="toggleText()">
+                                            <span class="slider"></span>
+                                        </label>
+                                
+                                        <p style="padding-left: 1vh; font-style: italic; color: #383838; opacity: 1;">*no bluff</p>
+                                    </div>
+                                </section>
                                 <div class="col-row col-row-title-2">
                                     <div class="star" data-scroll data-scroll-direction="horizontal"
                                         data-scroll-speed="-2">
@@ -200,14 +212,7 @@
                                     <h2><span class="italic"></span></h2>
                                 </div>
                                 <div class="col-row col-row-text">
-                                    <p class="big" id="toggle-text">I use code like a paintbrush and pixels as my
-                                        canvas—crafting designs that are not only seen but truly felt. I’m a passionate
-                                        web, UI/UX, and graphic design enthusiast with growing skills in DevOps and
-                                        testing, constantly evolving in this dynamic field. Though my journey is just
-                                        beginning, my creativity runs deep, driven by a relentless desire to build
-                                        meaningful, immersive experiences. With every project, I blend logic with
-                                        artistry—designing not just interfaces, but stories users can interact with.
-                                        Join me as I turn ideas into impact, one design at a time.</p>
+                                    <p class="big" id="toggle-text">I live and design with a focus on clarity, meaning, and purposeful simplicity—embracing only what truly works and brings value. Inspired by conscious minimalism, I find beauty not just in grand gestures but in the subtle details of nature, architecture, and everyday life. For me, design is a storytelling craft where every interface goes beyond colors and fonts to evoke genuine emotion and connection. Blending my passions as a designer, coder, and artist, I create experiences that are both elegantly simple and deeply meaningful, reflecting a unique harmony between creativity and function.</p>
                                 </div>
                             </div>
                         </div>
@@ -286,18 +291,25 @@
     <script defer src="js/index.js"></script>
 
     <script>
-        function toggleText() {
-            const paragraph = document.getElementById("toggle-text");
+  function toggleText() {
+    const paragraph = document.getElementById("toggle-text");
 
-            const fullVersion = "I use code like a paintbrush and pixels as my canvas—crafting designs that are not only seen but truly felt. I’m a passionate web, UI/UX, and graphic design enthusiast with growing skills in DevOps and testing, constantly evolving in this dynamic field. Though my journey is just beginning, my creativity runs deep, driven by a relentless desire to build meaningful, immersive experiences. With every project, I blend logic with artistry—designing not just interfaces, but stories users can interact with. Join me as I turn ideas into impact, one design at a time.";
+    const fullVersion = "I live and design with a focus on clarity, meaning, and purposeful simplicity—embracing only what truly works and brings value. Inspired by conscious minimalism, I find beauty not just in grand gestures but in the subtle details of nature, architecture, and everyday life. For me, design is a storytelling craft where every interface goes beyond colors and fonts to evoke genuine emotion and connection. Blending my passions as a designer, coder, and artist, I create experiences that are both elegantly simple and deeply meaningful, reflecting a unique harmony between creativity and function.";
 
-            const noBluffVersion = "UI/UX & graphic designer with DevOps and software engineering skills. Self-taught, adaptable, and continuously improving to meet industry needs.";
+    const noBluffVersion = 'I focus on <span class="highlight">clear</span>, <span class="highlight">meaningful</span> design that <span class="highlight">works</span>. I follow <span class="highlight">conscious minimalism</span> - keeping only what’s necessary and valuable. I find beauty in <span class="highlight">simple details</span> around me. Combining design, coding, and art, I build <span class="highlight">straightforward, impactful</span> experiences.';
 
-            paragraph.innerText = paragraph.innerText === fullVersion ? noBluffVersion : fullVersion;
-        }
-    </script>
+    if (paragraph.innerHTML === fullVersion) {
+      paragraph.innerHTML = noBluffVersion;
+    } else {
+      paragraph.innerHTML = fullVersion;
+    }
+  }
+</script>
 
     <style>
+        .highlight {
+    color: var(--color-high);
+  }
         .toggle-container {
             display: flex;
             align-items: center;
@@ -310,8 +322,8 @@
         }
 
         .switch {
-            --secondary-container: #dd81ff;
-            --primary: #110021;
+            --secondary-container: #ff4c24;
+            --primary: #000000;
             font-size: 3vh;
             position: relative;
             display: inline-block;
@@ -333,7 +345,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #2a0050;
+            background-color: #383838;
             transition: .2s;
             border-radius: 30px;
         }
@@ -346,7 +358,7 @@
             border-radius: 20px;
             left: 0.2vh;
             bottom: 0.2vh;
-            background-color: #110021;
+            background-color: var(--color-dark);
             transition: .4s;
         }
 
