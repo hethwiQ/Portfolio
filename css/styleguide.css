@@ -1,8 +1,8 @@
 /* ------------------------- Fonts -------------------------------------------------- */
 
 @font-face {
-    font-family: 'Neue Montreal';
-    src:  url('../fonts/NeueMontreal-Regular.ttf') format('truetype');
+    font-family: 'sf-pro';
+    src:  url('../fonts/SF-Pro.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
  
  @font-face {
     font-family: 'Fraunces';
-    src:  url('../fonts/Fraunces_144pt-Italic.ttf') format('truetype');
+    src:  url('../fonts/SF-Pro-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
     font-display: swap;
@@ -28,10 +28,10 @@
  
  :root {
  
-    --color-dark-rgb: 15, 23, 25; 
+    --color-dark-rgb: 0, 0, 0; 
     --color-dark: rgba(var(--color-dark-rgb), 1);
  
-    --color-light-rgb: 241, 255, 153;
+    --color-light-rgb: 239, 238, 236;
     --color-light: rgba(var(--color-light-rgb), 1);
  
     --color-white-rgb: 255, 255, 255;
@@ -39,6 +39,9 @@
  
     --color-black-rgb: 0, 0, 0;
     --color-black: rgba(var(--color-black-rgb), 1);
+
+    --color-high-rgb: 255, 76, 36;
+    --color-high: rgba(var(--color-high-rgb), 1);
  
     --color-primary: var(--color-dark);
     --color-secondary: var(--color-light);
@@ -68,6 +71,8 @@
  
     --btn-height: 2.75em;
     --nav-bar-height: calc(var(--btn-height) + (var(--row-gap * 2)));
+
+    --opacity-nature: 0.5;
  }
  
  [data-theme-section="dark"] {
@@ -104,7 +109,7 @@
  
  body {
     -webkit-font-smoothing: antialiased;
-    font-family: 'Neue Montreal', sans-serif;
+    font-family: 'sf-pro', sans-serif;
     color: var(--color-light);
     line-height: 1.5;
     font-weight: 400;
@@ -129,13 +134,13 @@
  /* Selection */
  ::selection {
     background-color: var(--color-light);
-    color: var(--color-dark);
+    color: var(--color-high);
     text-shadow: none;
  }
  
  ::-moz-selection {
     background-color: var(--color-light);
-    color: var(--color-dark);
+    color: var(--color-high);
     text-shadow: none;
  }
  

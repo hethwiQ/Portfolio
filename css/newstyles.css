@@ -4,13 +4,14 @@
     border-radius: 10em;
     background: transparent;
     font-size: 17px;
-    color: rgb(241,255,153);
+    color: var(--color-light);
     font-family: inherit;
     font-weight: 500;
    }
    
    .Shake:hover {
     animation: shake3856 0.3s linear infinite both;
+    color: var(--color-high);
    }
    
    @keyframes shake3856 {
@@ -683,8 +684,8 @@
  }
  
  /* Selection */
-::selection {background-color: var(--color-blue); color: var(--color-white); text-shadow: none;}
-::-moz-selection {background-color: var(--color-blue); color: var(--color-white); text-shadow: none;}
+::selection {background-color: var(--color-blue); color: var(--color-high); text-shadow: none;}
+::-moz-selection {background-color: var(--color-blue); color: var(--color-high); text-shadow: none;}
 
 canvas, img, video {
     max-width: 100%;
