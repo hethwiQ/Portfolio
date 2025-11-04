@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hethwiq.github.io/Portfolio/sitemap.xml
