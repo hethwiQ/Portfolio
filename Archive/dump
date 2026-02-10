@@ -1,0 +1,270 @@
+
+<!----FAQ-->
+
+<!----FAQ Slider-->
+        <section data-theme-section="light" class="faq">
+            <div class="container is--s is--md-m">
+                <div class="faq__title">
+                    <h2 class="h-ml">Got questions?<br />I’ve got answers.</h2>
+                    <div class="faq__title-scribble">
+                        <p class="scribble">I even answered<br />without ChatGPT ;)</p><svg
+                            xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 32 32" fill="none"
+                            class="faq__title-scribble-arrow">
+                            <path
+                                d="M0.811778 30.9739L0.611728 29.7224L0.0106334 29.3396C1.96759 29.5231 2.9029 26.4814 4.76811 25.7896C5.33095 25.5814 5.42096 26.2381 5.24333 26.4359C5.20055 26.4845 4.51387 26.669 4.09003 27.0674C3.7286 27.4109 1.98139 28.9553 2.2919 29.3524C7.36056 28.8823 12.0132 27.7076 16.4405 25.1506C25.4623 19.9466 30.4543 10.4517 31.3555 0.219667C31.8885 15.3444 19.0876 28.3645 4.24771 29.6991C4.58435 30.5566 7.36811 29.6624 7.17251 31.0187L0.815039 30.9739L0.811778 30.9739Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <div class="button-row__wrap w-dyn-list">
+                        <div role="list" class="button-row w-dyn-items">
+                            <div role="listitem" class="button__wrap w-dyn-item"><button data-button-rotate=""
+                                    data-shape="" data-faq-toggle="Vault" data-toggle-status="" data-responsive=""
+                                    data-size="" data-theme="" data-button-rotate-hover="" class="button">
+                                    <div data-wf--button-theme--variant="neutral-300" class="button-bg"></div>
+                                    <div class="button-label__wrap">
+                                        <div class="button-label"><span>Vault</span></div>
+                                        <div aria-hidden="true" class="button-label"><span
+                                                aria-hidden="true">Vault</span></div>
+                                        <div aria-hidden="true" class="button-label"><span>Vault</span></div>
+                                    </div>
+                                </button></div>
+                            <div role="listitem" class="button__wrap w-dyn-item"><button data-button-rotate=""
+                                    data-shape="" data-faq-toggle="General" data-toggle-status="" data-responsive=""
+                                    data-size="" data-theme="" data-button-rotate-hover="" class="button">
+                                    <div data-wf--button-theme--variant="neutral-300" class="button-bg"></div>
+                                    <div class="button-label__wrap">
+                                        <div class="button-label"><span>General</span></div>
+                                        <div aria-hidden="true" class="button-label"><span
+                                                aria-hidden="true">General</span></div>
+                                        <div aria-hidden="true" class="button-label"><span>General</span></div>
+                                    </div>
+                                </button></div>
+                            <div role="listitem" class="button__wrap w-dyn-item"><button data-button-rotate=""
+                                    data-shape="" data-faq-toggle="Account" data-toggle-status="" data-responsive=""
+                                    data-size="" data-theme="" data-button-rotate-hover="" class="button">
+                                    <div data-wf--button-theme--variant="neutral-300" class="button-bg"></div>
+                                    <div class="button-label__wrap">
+                                        <div class="button-label"><span>Account</span></div>
+                                        <div aria-hidden="true" class="button-label"><span
+                                                aria-hidden="true">Account</span></div>
+                                        <div aria-hidden="true" class="button-label"><span>Account</span></div>
+                                    </div>
+                                </button></div>
+                        </div>
+                    </div>
+                </div>
+                <!-----FAQ-->
+                <div class="faq__wrap">
+                    <div data-collection-status="active" data-faq-collection="Vault" class="faq__collection w-dyn-list">
+                        <div data-accordion-css-init="" data-accordion-close-siblings="true" role="list"
+                            class="faq__list w-dyn-items">
+                            <!----FAQ Start-->
+                            <!--------Category 1-->
+                            <!----FAQ Cell 1-->
+                            <div data-accordion-status="not-active" role="listitem" class="faq__item w-dyn-item">
+                                <div data-accordion-toggle="" class="faq__item-top">
+                                    <h3 class="p-l u--fw-medium">What is the Vault?</h3>
+                                    <div class="faq__item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                            viewBox="0 0 13 13" fill="none" class="svg">
+                                            <path
+                                                d="M5.96149 12.0996V6.99217H0.839844V5.20705H5.96149V0.0996094H7.74294V5.20705H12.8398V6.99217H7.74294V12.0996H5.96149Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                                <div class="faq__item-bottom">
+                                    <div class="faq__item-bottom-wrap">
+                                        <div class="faq__item-bottom-content">
+                                            <div class="rich-text w-richtext">
+                                                <p>The Vault is where all Osmo resources live. It’s basically our
+                                                    platform, the heart of our product.</p>
+                                                <p>You’ll find a mix of functional and creative resources:
+                                                    components,
+                                                    snippets, effects, and techniques built for designers and
+                                                    developers
+                                                    who love detail. </p>
+                                                <p>Everything comes with clear documentation for both Webflow and
+                                                    HTML/CSS/JS. We use the best tools available on the web, like
+                                                    GSAP,
+                                                    so you can easily learn, copy, or adapt them into your own
+                                                    projects.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----FAQ Cell 2-->
+                            <div data-accordion-status="not-active" role="listitem" class="faq__item w-dyn-item">
+                                <div data-accordion-toggle="" class="faq__item-top">
+                                    <h3 class="p-l u--fw-medium">Can I share the Osmo Vault with my co-worker or
+                                        friend?
+                                    </h3>
+                                    <div class="faq__item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                            viewBox="0 0 13 13" fill="none" class="svg">
+                                            <path
+                                                d="M5.96149 12.0996V6.99217H0.839844V5.20705H5.96149V0.0996094H7.74294V5.20705H12.8398V6.99217H7.74294V12.0996H5.96149Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                                <div class="faq__item-bottom">
+                                    <div class="faq__item-bottom-wrap">
+                                        <div class="faq__item-bottom-content">
+                                            <div class="rich-text w-richtext">
+                                                <p>No, not unless you’re on a team account. Regular Osmo accounts
+                                                    are
+                                                    single-user.</p>
+                                                <p>If we suspect account sharing or other misuse, we reserve the
+                                                    right
+                                                    to temporarily disable access until the situation is cleared up.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div data-collection-status="not-active" data-faq-collection="Account"
+                        class="faq__collection w-dyn-list">
+                        <div data-accordion-css-init="" data-accordion-close-siblings="true" role="list"
+                            class="faq__list w-dyn-items">
+                            <!--------Category 2-->
+                            <!----FAQ Cell 1-->
+                            <div data-accordion-status="not-active" role="listitem" class="faq__item w-dyn-item">
+                                <div data-accordion-toggle="" class="faq__item-top">
+                                    <h3 class="p-l u--fw-medium">What is the Vault?</h3>
+                                    <div class="faq__item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                            viewBox="0 0 13 13" fill="none" class="svg">
+                                            <path
+                                                d="M5.96149 12.0996V6.99217H0.839844V5.20705H5.96149V0.0996094H7.74294V5.20705H12.8398V6.99217H7.74294V12.0996H5.96149Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                                <div class="faq__item-bottom">
+                                    <div class="faq__item-bottom-wrap">
+                                        <div class="faq__item-bottom-content">
+                                            <div class="rich-text w-richtext">
+                                                <p>The Vault is where all Osmo resources live. It’s basically our
+                                                    platform, the heart of our product.</p>
+                                                <p>You’ll find a mix of functional and creative resources:
+                                                    components,
+                                                    snippets, effects, and techniques built for designers and
+                                                    developers
+                                                    who love detail. </p>
+                                                <p>Everything comes with clear documentation for both Webflow and
+                                                    HTML/CSS/JS. We use the best tools available on the web, like
+                                                    GSAP,
+                                                    so you can easily learn, copy, or adapt them into your own
+                                                    projects.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----FAQ Cell 2-->
+                            <div data-accordion-status="not-active" role="listitem" class="faq__item w-dyn-item">
+                                <div data-accordion-toggle="" class="faq__item-top">
+                                    <h3 class="p-l u--fw-medium">Can I share the Osmo Vault with my co-worker or
+                                        friend?
+                                    </h3>
+                                    <div class="faq__item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                            viewBox="0 0 13 13" fill="none" class="svg">
+                                            <path
+                                                d="M5.96149 12.0996V6.99217H0.839844V5.20705H5.96149V0.0996094H7.74294V5.20705H12.8398V6.99217H7.74294V12.0996H5.96149Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                                <div class="faq__item-bottom">
+                                    <div class="faq__item-bottom-wrap">
+                                        <div class="faq__item-bottom-content">
+                                            <div class="rich-text w-richtext">
+                                                <p>No, not unless you’re on a team account. Regular Osmo accounts
+                                                    are
+                                                    single-user.</p>
+                                                <p>If we suspect account sharing or other misuse, we reserve the
+                                                    right
+                                                    to temporarily disable access until the situation is cleared up.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div data-collection-status="not-active" data-faq-collection="General"
+                        class="faq__collection w-dyn-list">
+                        <div data-accordion-css-init="" data-accordion-close-siblings="true" role="list"
+                            class="faq__list w-dyn-items">
+                            <!--------Category 3-->
+                            <!----FAQ Cell 1-->
+                            <div data-accordion-status="not-active" role="listitem" class="faq__item w-dyn-item">
+                                <div data-accordion-toggle="" class="faq__item-top">
+                                    <h3 class="p-l u--fw-medium">What is the Vault?</h3>
+                                    <div class="faq__item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                            viewBox="0 0 13 13" fill="none" class="svg">
+                                            <path
+                                                d="M5.96149 12.0996V6.99217H0.839844V5.20705H5.96149V0.0996094H7.74294V5.20705H12.8398V6.99217H7.74294V12.0996H5.96149Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                                <div class="faq__item-bottom">
+                                    <div class="faq__item-bottom-wrap">
+                                        <div class="faq__item-bottom-content">
+                                            <div class="rich-text w-richtext">
+                                                <p>The Vault is where all Osmo resources live. It’s basically our
+                                                    platform, the heart of our product.</p>
+                                                <p>You’ll find a mix of functional and creative resources:
+                                                    components,
+                                                    snippets, effects, and techniques built for designers and
+                                                    developers
+                                                    who love detail. </p>
+                                                <p>Everything comes with clear documentation for both Webflow and
+                                                    HTML/CSS/JS. We use the best tools available on the web, like
+                                                    GSAP,
+                                                    so you can easily learn, copy, or adapt them into your own
+                                                    projects.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----FAQ Cell 2-->
+                            <div data-accordion-status="not-active" role="listitem" class="faq__item w-dyn-item">
+                                <div data-accordion-toggle="" class="faq__item-top">
+                                    <h3 class="p-l u--fw-medium">Can I share the Osmo Vault with my co-worker or
+                                        friend?
+                                    </h3>
+                                    <div class="faq__item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                                            viewBox="0 0 13 13" fill="none" class="svg">
+                                            <path
+                                                d="M5.96149 12.0996V6.99217H0.839844V5.20705H5.96149V0.0996094H7.74294V5.20705H12.8398V6.99217H7.74294V12.0996H5.96149Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                                <div class="faq__item-bottom">
+                                    <div class="faq__item-bottom-wrap">
+                                        <div class="faq__item-bottom-content">
+                                            <div class="rich-text w-richtext">
+                                                <p>No, not unless you’re on a team account. Regular Osmo accounts
+                                                    are
+                                                    single-user.</p>
+                                                <p>If we suspect account sharing or other misuse, we reserve the
+                                                    right
+                                                    to temporarily disable access until the situation is cleared up.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----FAQ End-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
