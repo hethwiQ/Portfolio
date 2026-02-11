@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 
 Disallow: /google432fb4f62bc1ca40.html
+Disallow: /404.html
 
 Sitemap: https://hethwiq.github.io/Portfolio/sitemap.xml
