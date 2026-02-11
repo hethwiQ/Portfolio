@@ -5008,7 +5008,19 @@ function initCountdown() {
         debug: !1,
         timeout: 7e3,
         preventRunning: !0,
-        prevent: ({ el: t }) => "true" === t.getAttribute("data-barba-p"),
+        // UPDATED PREVENT LOGIC BELOW
+        prevent: ({ el: t }) => {
+            // 1. Prevent if it has your custom attribute
+            if ("true" === t.getAttribute("data-barba-p")) return true;
+            
+            // 2. Prevent if it has the standard data-barba-prevent attribute
+            if (t.hasAttribute("data-barba-prevent")) return true;
+
+            // 3. Prevent if we are currently on the 404 page (checks namespace)
+            if (document.querySelector('[data-barba-namespace="404"]')) return true;
+
+            return false;
+        },
         transitions: [
             {
                 name: "self",
