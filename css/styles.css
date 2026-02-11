@@ -10694,6 +10694,70 @@ strong {
     position: absolute;
     inset: 0% 0% auto
 }
+/* --- NEW MODAL MOCKUP STYLES --- */
+
+/* 1. Wrapper: Centers the phone and controls max size */
+.modal-mockup-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+/* 2. The Phone Container: The width here controls the size of the whole phone */
+.modal-device {
+    position: relative;
+    /* DESKTOP SIZE: Adjust this px value to make the phone bigger/smaller on PC */
+    width: 320px; 
+    
+    /* MOBILE SIZE: Never wider than 85% of the screen */
+    max-width: 85vw; 
+}
+
+/* 3. The Aspect Ratio Hack (Matches your old site's 202% ratio) */
+.modal-device::before {
+    content: "";
+    display: block;
+    padding-top: 202%; /* This forces the height based on the width */
+}
+
+/* 4. The Screen (Video) - sits BEHIND the frame */
+.modal-device-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Width/Height tweaked to fit inside the 'device-phone-nonotch.png' perfectly */
+    width: 90.5%; 
+    height: 97.5%; 
+    background-color: #000;
+    border-radius: 40px; /* Rounds the video corners */
+    overflow: hidden;
+    z-index: 1; /* Lower z-index so it stays behind the frame */
+}
+
+.modal-device-screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills screen without black bars */
+    display: block;
+}
+
+/* 5. The Phone Frame Overlay - sits ON TOP of the video */
+.modal-device-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/hethwiQ/siteassets/refs/heads/main/images/device-phone-nonotch.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2; /* Higher z-index to sit on top */
+    pointer-events: none; /* Lets you click through if needed */
+}
 
 .vault-features__tags {
     left: 0%;
