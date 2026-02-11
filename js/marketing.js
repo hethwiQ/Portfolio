@@ -1660,6 +1660,8 @@ function initModals() {
                     const u = s ? t.querySelector(`[data-modal-target="${s}"]`) : e();
                     u &&
                         (u.removeAttribute("data-modal-status"),
+                        // PAUSE VIDEO ON CLOSE -- fixed autoplay to pause when closed modal
+                            u.querySelectorAll('video').forEach(vid => vid.pause()),
                             gsap.delayedCall(0.75, () => {
                                 u.scrollTop = 0;
                             }),
@@ -1703,6 +1705,13 @@ function initModals() {
                                 (n = p || n || null),
                                 t.removeAttribute("aria-hidden"),
                                 f.setAttribute("data-modal-status", "active"),
+                                (() => {
+        const vid = f.querySelector('video');
+        if (vid) {
+            vid.currentTime = 0;
+            vid.play().catch(() => {});
+        }
+    })(), //Fixed autoplay when opened modal
                                 window.lenis &&
                                 "function" == typeof window.lenis.stop &&
                                 (window.lenis.stop(), (window.lenis.__osmoRunning = !1)),
