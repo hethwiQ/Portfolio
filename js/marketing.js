@@ -1705,13 +1705,14 @@ function initModals() {
                                 (n = p || n || null),
                                 t.removeAttribute("aria-hidden"),
                                 f.setAttribute("data-modal-status", "active"),
-                                (() => {
-        const vid = f.querySelector('video');
-        if (vid) {
-            vid.currentTime = 0;
-            vid.play().catch(() => {});
-        }
-    })(), //Fixed autoplay when opened modal
+        (() => {
+        // Find ALL videos inside the active modal
+        const vids = f.querySelectorAll('video');
+        vids.forEach(vid => {
+        vid.currentTime = 0; // Reset each video
+        vid.play().catch(() => {}); // Play each video safely
+        });
+        })(), //Fixed autoplay when opened modal
                                 window.lenis &&
                                 "function" == typeof window.lenis.stop &&
                                 (window.lenis.stop(), (window.lenis.__osmoRunning = !1)),
