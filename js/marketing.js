@@ -24,11 +24,13 @@ var userProfile = null;
 function setThemeFromSlug(t) {
     const e = new Set([
         "work",
+        "404"
     ]),
         a = t.trigger?.closest?.("a[href]"),
         r = a ? a.href : t.next?.url?.pathname || "/",
         n = new URL(r, location.origin).pathname.replace(/^\/+|\/+$/g, ""),
         o = n.split("/")[0],
+        is404 = t.next.namespace === "404",
         i = e.has(n) || ["product", "plans"].includes(o) ? "dark" : "light";
     (document
         .querySelector(".transition")
