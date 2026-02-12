@@ -23,14 +23,7 @@ const $ = (t, e = document) => e.querySelector(t),
 var userProfile = null;
 function setThemeFromSlug(t) {
     const e = new Set([
-        "no-access",
-        "collection",
-        "logged-out",
-        "newsletter",
-        "request-lifetime-copy-v1",
-        "request-lifetime-copy-v2",
-        "login",
-        "try",
+        "work",
     ]),
         a = t.trigger?.closest?.("a[href]"),
         r = a ? a.href : t.next?.url?.pathname || "/",
@@ -280,6 +273,8 @@ function initScriptsAfterEnter() {
         has("[data-download-mp4]") && initDownloadMP4(),
         has("[data-playful-cards-wrap]") && initPlayfulCardsReveal(),
         has("[data-countdown-date]") && initCountdown(),
+        initWorkFilters(), 
+        initCustomCursor(),
         lenis.resize(),
         ScrollTrigger.refresh());
 }
@@ -5062,3 +5057,169 @@ function initCountdown() {
         ],
     }),
     (window.__outseta = { ready: !1, profile: null, promise: null }));
+// CUSTOM FUNCTIONS (PRESERVED ORIGINAL LOGIC)
+// =================================================================
+// =================================================================
+// CUSTOM FUNCTIONS (FIXED: References & Hover Effects)
+// =================================================================
+
+// 1. WORK FILTERS LOGIC
+window.initWorkFilters = function() {
+    // A. Check if we are on the work page
+    const rawFilters = document.querySelectorAll('.filter-btn');
+    if (rawFilters.length === 0) return;
+
+    // B. Clone buttons to strip old listeners (Barba Safety)
+    const safeFilters = Array.from(rawFilters).map(btn => {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        // Reset rotation flags so hover effect can be re-applied
+        newBtn._rotBound = false; 
+        return newBtn;
+    });
+
+    // C. CRITICAL: Re-select 'Show All' from the NEW elements
+    // (This fixes the bug where the button goes blank/inactive)
+    const allBtn = document.querySelector('.is--all'); 
+    
+    // D. Setup Clear Link
+    const clearLinkRaw = document.getElementById('clear-filters');
+    let safeClearLink = null;
+    if (clearLinkRaw) {
+        safeClearLink = clearLinkRaw.cloneNode(true);
+        clearLinkRaw.parentNode.replaceChild(safeClearLink, clearLinkRaw);
+    }
+
+    const items = document.querySelectorAll('.collection-list__item');
+    let activeFilters = [];
+
+    // --- Helper Functions ---
+
+    function applyFilters() {
+        // Toggle Clear Link Visibility
+        if (safeClearLink) {
+            if (activeFilters.length > 0) safeClearLink.classList.remove('is--disabled');
+            else safeClearLink.classList.add('is--disabled');
+        }
+
+        // Show/Hide Items
+        items.forEach(item => {
+            const itemCategory = (item.getAttribute('data-category') || "").toLowerCase();
+            const itemTags = itemCategory.split(' ').map(tag => tag.trim()).filter(t => t);
+
+            if (activeFilters.length === 0) {
+                item.style.display = 'block';
+                if(window.gsap) gsap.to(item, {opacity: 1, y: 0, duration: 0.3, clearProps: "all"});
+            } else {
+                // Match ALL active filters
+                const isVisible = activeFilters.every(filter => itemTags.includes(filter));
+                if (isVisible) {
+                    item.style.display = 'block';
+                    if(window.gsap) gsap.fromTo(item, {opacity: 0, y: 10}, {opacity: 1, y: 0, duration: 0.3, clearProps: "all"});
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    function resetFilters() {
+        activeFilters = [];
+        // Reset visual state of all buttons
+        safeFilters.forEach(btn => {
+            btn.classList.remove('is--active');
+            btn.setAttribute('data-shape', 'square');
+        });
+        // Reset 'Show All' to active
+        if (allBtn) {
+            allBtn.classList.add('is--active');
+            allBtn.setAttribute('data-shape', 'round');
+        }
+        applyFilters();
+    }
+
+    // --- Event Listeners ---
+
+    safeFilters.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+
+            if (filter === 'all') {
+                resetFilters();
+            } else {
+                // Deactivate 'Show All'
+                if (allBtn) {
+                    allBtn.classList.remove('is--active');
+                    allBtn.setAttribute('data-shape', 'square');
+                }
+
+                if (activeFilters.includes(filter)) {
+                    // Remove filter
+                    activeFilters = activeFilters.filter(item => item !== filter);
+                    button.classList.remove('is--active');
+                    button.setAttribute('data-shape', 'square');
+                } else {
+                    // Add filter
+                    activeFilters.push(filter);
+                    button.classList.add('is--active');
+                    button.setAttribute('data-shape', 'round');
+                }
+            }
+
+            // If user deselected everything, revert to All
+            if (activeFilters.length === 0) {
+                if (allBtn) {
+                    allBtn.classList.add('is--active');
+                    allBtn.setAttribute('data-shape', 'round');
+                }
+            }
+            applyFilters();
+        });
+    });
+
+    if (safeClearLink) {
+        safeClearLink.addEventListener('click', resetFilters);
+    }
+
+    // E. FIX HOVER EFFECT
+    // We explicitly re-run the Osmo hover animation logic on these new buttons
+    if (typeof initRotateButtonsAnim === "function") {
+        initRotateButtonsAnim();
+    }
+};
+
+// 2. CUSTOM CURSOR LOGIC
+window.initCustomCursor = function() {
+    if (typeof gsap === "undefined") return;
+    const cursor = document.querySelector(".c-cursor");
+    if (!cursor) return;
+
+    const cursorLabel = cursor.querySelector("span");
+    const body = document.body;
+
+    gsap.set(cursor, { xPercent: 0, yPercent: 0 });
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.6, ease: "power3" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.6, ease: "power3" });
+
+    if (window.cursorMoveHandler) window.removeEventListener("mousemove", window.cursorMoveHandler);
+
+    window.cursorMoveHandler = (e) => {
+        xTo(e.clientX + 20);
+        yTo(e.clientY + 20);
+    };
+    window.addEventListener("mousemove", window.cursorMoveHandler);
+
+    const triggers = document.querySelectorAll("[data-c-cursor]");
+    triggers.forEach((trigger) => {
+        trigger.addEventListener("mouseenter", () => {
+            const text = trigger.getAttribute("data-c-cursor");
+            if (text && cursorLabel) cursorLabel.innerText = text;
+            cursor.classList.add("is-active");
+            body.classList.add("using-custom-cursor");
+        });
+        trigger.addEventListener("mouseleave", () => {
+            cursor.classList.remove("is-active");
+            body.classList.remove("using-custom-cursor");
+        });
+    });
+};
