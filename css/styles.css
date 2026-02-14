@@ -6796,8 +6796,8 @@ strong {
 .info__wrap {
     grid-column-gap: var(--gap-sm);
     grid-row-gap: var(--gap-sm);
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     display: flex
 }
 
